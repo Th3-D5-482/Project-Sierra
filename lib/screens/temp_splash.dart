@@ -1,26 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:sierra/screens/splash/splash1_page.dart';
+import 'package:sierra/screens/splash.dart';
 
-class Splash extends StatefulWidget {
-  const Splash({super.key});
+class TempSplash extends StatefulWidget {
+  const TempSplash({super.key});
 
   @override
-  State<Splash> createState() => _SplashState();
+  State<TempSplash> createState() => _TempSplashState();
 }
 
-class _SplashState extends State<Splash> {
+class _TempSplashState extends State<TempSplash> {
   @override
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 5), () {
       // ignore: use_build_context_synchronously
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) {
-            return const Splash1Page();
-          },
-        ),
-      );
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) {
+          return const Splash();
+        },
+      ));
     });
   }
 
@@ -35,7 +33,7 @@ class _SplashState extends State<Splash> {
               Text(
                 'Project: Sierra',
                 style: TextStyle(
-                  fontSize: 36,
+                  fontSize: 32,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -52,8 +50,8 @@ class _SplashState extends State<Splash> {
               Text(
                 'Work In Progress',
                 style: TextStyle(
-                  fontWeight: FontWeight.bold,
                   fontSize: 24,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(
