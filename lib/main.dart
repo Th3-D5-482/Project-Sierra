@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sierra/screens/splash/splash1_page.dart';
+import 'package:sierra/screens/splash/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: const Color.fromRGBO(91, 158, 225, 1),
             foregroundColor: Colors.white,
           ))),
-      home: const Splash1Page(),
+      home: const Splash(),
     );
   }
 }

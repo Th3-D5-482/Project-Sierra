@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Splash1Page extends StatefulWidget {
   const Splash1Page({super.key});
@@ -8,6 +9,7 @@ class Splash1Page extends StatefulWidget {
 }
 
 class _Splash1PageState extends State<Splash1Page> {
+  final PageController _pageController = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,6 +19,10 @@ class _Splash1PageState extends State<Splash1Page> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(
+                height: 140,
+              ),
+              Image.asset('assets/images/shoe1.png'),
               const Spacer(),
               Text(
                 'Start Journey',
@@ -49,8 +55,18 @@ class _Splash1PageState extends State<Splash1Page> {
               ),
               Row(
                 children: [
-                  const Row(
-                    children: [],
+                  Row(
+                    children: [
+                      SmoothPageIndicator(
+                        controller: _pageController,
+                        count: 3,
+                        effect: ExpandingDotsEffect(
+                          activeDotColor: Theme.of(context).colorScheme.primary,
+                          dotWidth: 20,
+                          dotHeight: 8,
+                        ),
+                      )
+                    ],
                   ),
                   const Spacer(),
                   Expanded(
