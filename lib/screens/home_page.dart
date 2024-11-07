@@ -49,7 +49,7 @@ class SubHomePage extends StatefulWidget {
 }
 
 class _SubHomePageState extends State<SubHomePage> {
-  TextEditingController search = TextEditingController();
+  late TextEditingController search = TextEditingController();
 
   @override
   void initState() {
@@ -84,7 +84,7 @@ class _SubHomePageState extends State<SubHomePage> {
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 30,
                   ),
                   TextField(
                     controller: search,
@@ -93,16 +93,65 @@ class _SubHomePageState extends State<SubHomePage> {
                         Icons.search,
                         size: 28,
                       ),
-                      prefixIconColor: Colors.white,
+                      prefixIconColor: Theme.of(context).colorScheme.secondary,
                       hintText: 'Search recipes',
-                      hintStyle: const TextStyle(
+                      hintStyle: TextStyle(
                         fontSize: 16,
-                        color: Colors.white,
+                        color: Theme.of(context).colorScheme.secondary,
                       ),
                       enabledBorder:
                           Theme.of(context).inputDecorationTheme.enabledBorder,
                       focusedBorder:
                           Theme.of(context).inputDecorationTheme.focusedBorder,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'Trending now 🔥',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      const Spacer(),
+                      TextButton(
+                        onPressed: () {},
+                        child: const Row(
+                          children: [
+                            Text('See all'),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Icon(
+                              Icons.arrow_forward_rounded,
+                              size: 20,
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    height: 220,
+                    child: ListView.builder(
+                      itemCount: 3,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return const Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Card(
+                            child: Column(
+                              children: [
+                                Text('Hello World'),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   )
                 ],

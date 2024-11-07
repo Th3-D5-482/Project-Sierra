@@ -30,13 +30,19 @@ class _SplashState extends State<Splash> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.star),
+                      const Icon(
+                        Icons.star,
+                        color: Colors.white,
+                      ),
                       const SizedBox(
                         width: 10,
                       ),
                       Text(
                         '60k+ Premium Recipes',
-                        style: Theme.of(context).textTheme.titleMedium,
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  color: Colors.white,
+                                ),
                       )
                     ],
                   ),
@@ -50,6 +56,7 @@ class _SplashState extends State<Splash> {
                         style: TextStyle(
                           fontSize: 60,
                           fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                       const Text(
@@ -57,6 +64,7 @@ class _SplashState extends State<Splash> {
                         style: TextStyle(
                           fontSize: 60,
                           fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                       const SizedBox(
@@ -66,6 +74,8 @@ class _SplashState extends State<Splash> {
                         'Find best recipe for cooking',
                         style: TextStyle(
                           fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                       const SizedBox(

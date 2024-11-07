@@ -57,7 +57,13 @@ class _TempSplashState extends State<TempSplash> {
               SizedBox(
                 height: 10,
               ),
-              Text('By: Th3_D5_482')
+              Text(
+                'By: Th3_D5_482',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
             ],
           ),
         ),

@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Project: Sierra',
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData(
         textTheme: const TextTheme(
           titleMedium: TextStyle(
             fontSize: 22,
@@ -22,17 +22,20 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color.fromRGBO(226, 62, 62, 1),
           primary: const Color.fromRGBO(226, 62, 62, 1),
+          secondary: const Color.fromRGBO(193, 193, 193, 1),
         ),
-        inputDecorationTheme: const InputDecorationTheme(
+        inputDecorationTheme: InputDecorationTheme(
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey),
-            borderRadius: BorderRadius.all(
+            borderSide:
+                BorderSide(color: Theme.of(context).colorScheme.secondary),
+            borderRadius: const BorderRadius.all(
               Radius.circular(16),
             ),
           ),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey),
-            borderRadius: BorderRadius.all(
+            borderSide:
+                BorderSide(color: Theme.of(context).colorScheme.secondary),
+            borderRadius: const BorderRadius.all(
               Radius.circular(16),
             ),
           ),
