@@ -23,6 +23,20 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromRGBO(226, 62, 62, 1),
           primary: const Color.fromRGBO(226, 62, 62, 1),
         ),
+        inputDecorationTheme: const InputDecorationTheme(
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.grey),
+            borderRadius: BorderRadius.all(
+              Radius.circular(16),
+            ),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.grey),
+            borderRadius: BorderRadius.all(
+              Radius.circular(16),
+            ),
+          ),
+        ),
       ),
       home: const TempSplash(),
     );

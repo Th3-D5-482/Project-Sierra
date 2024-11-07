@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sierra/screens/home_page.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -73,7 +74,13 @@ class _SplashState extends State<Splash> {
                       Padding(
                         padding: const EdgeInsets.only(left: 90, right: 80),
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) {
+                                return const HomePage();
+                              },
+                            ));
+                          },
                           style: ElevatedButton.styleFrom(
                             padding: const EdgeInsets.only(
                                 top: 16, bottom: 16, left: 50, right: 16),
